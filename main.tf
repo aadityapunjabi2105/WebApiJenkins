@@ -9,13 +9,13 @@ terraform {
 }
 
 provider "azurerm" {
-  subscription_id = "39007855-6a12-4f14-ac77-13c3310b2789"
-  tenant_id       = "f56c6c65-c045-4485-9192-aa84a2951b0e"
+  subscription_id = "e4232d3a-c5db-45fa-abbb-cdcb9f3ffd70"
+  tenant_id       = "b7c094d3-45b6-4aa0-83e9-05d520efe4aa"
   features {}
 }
 
 resource "azurerm_resource_group" "web_rg" {
-  name     = "rick23"
+  name     = "git"
   location = "Central India"
 }
 
@@ -29,7 +29,7 @@ resource "azurerm_service_plan" "Web_plan" {
 
 }
 resource "azurerm_app_service" "web_app" {
-  name                = "app234"
+  name                = "git2"
   location            = azurerm_resource_group.web_rg.location
   resource_group_name = azurerm_resource_group.web_rg.name
   app_service_plan_id = azurerm_service_plan.Web_plan.id
