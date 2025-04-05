@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'master', url: 'https://github.com/aadityapunjabi2105/WebApiJenkins'
+                git branch: 'master', url: 'https://github.com/aadityapunjabi2105/WebApiJenkins.git'
          }
         }
          stage('Terraform Init') {
